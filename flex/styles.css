@@ -1,0 +1,87 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    /* Header sử dụng Flexbox */
+    justify-content: space-between;
+    /* Logo và menu ở hai đầu */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .nav ul {
+    display: flex;
+    /* Menu ngang */
+    list-style: none;
+    gap: 1rem;
+    /* Khoảng cách giữa các mục */
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    /* Bố cục ngang cho Sidebar và Content */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sidebar {
+    flex: 1;
+    /* Sidebar chiếm 1 phần */
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+.content {
+    flex: 3;
+    /* Content Area chiếm 3 phần */
+    background: #ddd;
+    padding: 1rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        /* Chuyển bố cục dọc */
+    }
+
+    .header .nav ul {
+        flex-direction: column;
+        /* Menu dạng dọc */
+        gap: 0.5rem;
+    }
+}
+
